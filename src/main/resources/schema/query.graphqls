@@ -1,0 +1,24 @@
+type Query{
+firstQuery: String
+fullName(firstName: String, lastName: String) : String
+getFullNameByObject(simpleRequest: SimpleRequest) : String
+employee(id: Long) : EmployeeResponse
+}
+
+input SimpleRequest{
+firstName : String,
+lastName : String
+}
+
+type EmployeeResponse{
+    id : Long,
+    firstName : String,
+    lastName : String,
+    salary : Float,
+    departments : [DepartmentResponse]
+}
+
+type DepartmentResponse{
+    id : Long,
+    name : String
+}

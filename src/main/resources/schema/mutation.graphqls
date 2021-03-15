@@ -1,0 +1,21 @@
+type Mutation{
+createEmployee(employeeRequest : EmployeeRequest) : EmployeeResponse
+}
+
+input EmployeeRequest{
+
+firstName : String
+lastName : String
+salary : Float
+addressRequest : AddressRequest
+departmentRequests : [DepartmentRequest]
+}
+
+input AddressRequest{
+city : String
+state : String
+}
+
+input DepartmentRequest{
+name : String
+}
